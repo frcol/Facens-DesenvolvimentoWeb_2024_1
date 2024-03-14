@@ -1,0 +1,82 @@
+<div class="container-fluid bg-dark" data-bs-theme="dark">
+  <nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="#"  style="padding-left: 20px;">{{nomeApp}}</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">{{menu[0]}}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">{{menu[1]}}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">{{menu[2]}}</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+
+<!-- Content -->
+<main class="container mt-4">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="card">
+        <img src="https://picsum.photos/200/200?random={{index}}" class="card-img-top" alt="Card Image">
+        <div class="card-body">
+          <h5 class="card-title">{{card.title}}</h5>
+          <p class="card-text">{{card.description}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <img src="https://picsum.photos/200/200?random=2" class="card-img-top" alt="Card Image">
+        <div class="card-body">
+          <h5 class="card-title">Card 2</h5>
+          <p class="card-text">This is the content of card 2.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <img src="https://picsum.photos/200/200?random=3" class="card-img-top" alt="Card Image">
+        <div class="card-body">
+          <h5 class="card-title">Card 3</h5>
+          <p class="card-text">This is the content of card 3.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <img src="https://picsum.photos/200/200?random=4" class="card-img-top" alt="Card Image">
+        <div class="card-body">
+          <h5 class="card-title">Card 3</h5>
+          <p class="card-text">This is the content of card 3.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </main>
+
+  <div class="myForm">
+    <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+      <input type="text" name="titulo" id="titulo" [(ngModel)]="card.title">
+      <input type="text" name="descricao" id="descricao" ngModel>
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+
+    <button class="btn bg-danger" (click)="onChangeImage()">Mude Imagem</button>
+  </div>
+
+<!-- Footer -->
+<footer class="container-fluid bg-dark text-center py-3 fixed-bottom">
+  <p class="mb-0" style="color: white;">
+    © 2022 Fábio Colombini. All rights reserved.
+  </p>
+</footer>

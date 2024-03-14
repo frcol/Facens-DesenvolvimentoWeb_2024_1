@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 
+import { Aluno } from './Aluno';
+import { NgForm } from '@angular/forms';
+
 @Component({
   selector: 'app-test',
   templateUrl: './test.component.html',
@@ -7,16 +10,16 @@ import { Component } from '@angular/core';
 })
 
 export class TestComponent {
-  titulo: string = "Meu App";
-  descricao: string = "Descrição do meu app";
-  index: number = 1;
-  minhaVariavel: string = "Valor inicial";
+  lstAlunos: Aluno[];
 
-  objImg = {
-    alt: "A imagem nao apareceu"
+  constructor() {
+    this.lstAlunos = [];
   }
 
-  onClick(msg: string) {
-    this.index++;
+  onSubmit(form: NgForm) {
+    let idade: number = Number(form.value.idade);
+    let alu1: Aluno = new Aluno(form.value.nome, idade, "123456");
+    this.lstAlunos.push(alu1);
+    form.resetForm();
   }
 }

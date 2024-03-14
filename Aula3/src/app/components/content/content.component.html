@@ -1,50 +1,12 @@
 <!-- Content -->
-<main class="container mt-4"  style="margin-bottom: 60px;">
+<main class="container mt-4"  style="margin-bottom: 0px;">
   <div class="row">
     <div class="col-md-3">
       <div class="card">
-        <img src="https://picsum.photos/200/200?random=1" class="card-img-top" alt="Card Image">
+        <img src="https://picsum.photos/200/200?random={{index}}" class="card-img-top" alt="Card Image">
         <div class="card-body">
-          <h5 class="card-title">Card 1</h5>
-          <p class="card-text">This is the content of card 1.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="card">
-        <img src="https://picsum.photos/200/200?random=2" class="card-img-top" alt="Card Image">
-        <div class="card-body">
-          <h5 class="card-title">Card 2</h5>
-          <p class="card-text">This is the content of card 2.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="card">
-        <img src="https://picsum.photos/200/200?random=3" class="card-img-top" alt="Card Image">
-        <div class="card-body">
-          <h5 class="card-title">Card 3</h5>
-          <p class="card-text">This is the content of card 3.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="card">
-        <img src="https://picsum.photos/200/200?random=4" class="card-img-top" alt="Card Image">
-        <div class="card-body">
-          <h5 class="card-title">Card 3</h5>
-          <p class="card-text">This is the content of card 3.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row mt-4">
-    <div class="col-md-3">
-      <div class="card">
-        <img src="https://picsum.photos/200/200?random=1" class="card-img-top" alt="Card Image">
-        <div class="card-body">
-          <h5 class="card-title">Card 1</h5>
-          <p class="card-text">This is the content of card 1.</p>
+          <h5 class="card-title">{{card.title}}</h5>
+          <p class="card-text">{{card.description}}</p>
         </div>
       </div>
     </div>
@@ -77,3 +39,14 @@
     </div>
   </div>
 </main>
+
+<div class="form">
+  <form #form="ngForm" action="">
+    <label for="title">Título:</label>
+    <input id="title" type="text" name="title" placeholder="Digite o Título" [(ngModel)]="card.title"><br>
+    <label for="desc">Decrição:</label>
+    <input id="desc" type="text" name="desc" placeholder="Digite a descrição" ngModel>
+    <input type="submit" (click)="onSubmit(form)" class="btn btn-primary">
+  </form>
+  <button class="btn btn-danger" (click)="onChangeImage()">MUDAR IMAGEM</button>
+</div>

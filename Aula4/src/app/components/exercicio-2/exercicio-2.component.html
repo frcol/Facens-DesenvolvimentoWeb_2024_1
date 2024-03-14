@@ -1,0 +1,30 @@
+<div class="main background">
+  <div class="card border-primary" style="width: 500px">
+    <form #myForm="ngForm" class="text-primary" >
+      <div class="card-header bg-primary text-bg-primary">
+        <b>Exercício 2</b>
+      </div>
+
+      <div class="form-floating m-3">
+        <input class="form-control border-primary" id="1" placeholder="" type="number" name="n1" ngModel>
+        <label for="1">Número 1</label>
+      </div>
+      <div class="form-floating m-3">
+        <input class="form-control border-primary" id="2" placeholder="" name="n2" ngModel>
+        <label for="2">Número 2</label>
+      </div>
+
+      <div class="text-center">
+        <button (click)="onSubmit(myForm, '+')" class="btn btn-dark btn-lg m-3 button">+</button>
+        <button (click)="onSubmit(myForm, '-')" class="btn btn-dark btn-lg m-3 button">-</button>
+        <button (click)="onSubmit(myForm, '*')" class="btn btn-dark btn-lg m-3 button">*</button>
+        <button (click)="onSubmit(myForm, '/')" class="btn btn-dark btn-lg m-3 button">/</button>
+      </div>
+      <div class="form-floating m-3">
+        <input class="form-control border-primary" id="2"  name="num2" [(ngModel)]="strResult" >
+        <label for="2">Resultado</label>
+      </div>
+    </form>
+  </div>
+</div>
+

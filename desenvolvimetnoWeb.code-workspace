@@ -1,22 +1,30 @@
 {
 	"folders": [
 		{
-			"path": "Aula1"
-		},
-		{
-			"path": "Aula2_HTML"
-		},
-		{
-			"path": "Aula2"
-		},
-		{
+			"name": "TMP",
 			"path": "TMP"
 		},
 		{
+			"name": "Aula1",
+			"path": "Aula1"
+		},
+		{
+			"name": "Aula2_HTML",
+			"path": "Aula2_HTML"
+		},
+		{
+			"name": "Aula2",
+			"path": "Aula2"
+		},
+		{
+			"name": "Aula3",
 			"path": "Aula3"
+		},
+		{
+			"path": "Aula4"
 		}
 	],
 	"settings": {
-		"liveServer.settings.multiRootWorkspaceName": "Aula2_HTML"
+		"liveServer.settings.multiRootWorkspaceName": "Aula4"
 	}
 }

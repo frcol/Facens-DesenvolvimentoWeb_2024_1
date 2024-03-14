@@ -1,0 +1,11 @@
+.ativaClass {
+    color: white;
+    background-color: green;
+    height: 30px;
+}
+
+.desativaClass {
+    color: white;
+    background-color: red;
+    height: 50px;
+}

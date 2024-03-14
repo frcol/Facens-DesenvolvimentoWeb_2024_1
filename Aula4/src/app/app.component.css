@@ -1,0 +1,12 @@
+.classe-ativa {
+    color: red;
+}
+
+.classe-desativada{
+    color: blue;
+}
+
+.classe2{
+    background-color: aqua;
+    text-decoration: line-through;
+}

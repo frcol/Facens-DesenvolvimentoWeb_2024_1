@@ -1,16 +1,10 @@
-<h1>{{titulo}}</h1>
-<p>{{descricao}}</p>
-
-<img src="https://picsum.photos/200/200?random={{index}}" [alt]="objImg.alt">
-
-<br><br>
-<button class="btn btn-primary" (click)="onClick('Legal!!')">CLique aqui</button>
-
-<br><br>
-<form action="">
-  <input type="text" name="meuTexto" [(ngModel)]="minhaVariavel">
+<form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
+  <input type="text" name="nome" ngModel>
+  <input type="text" name="idade" ngModel>
+  <button type="submit">Enviar</button>
 </form>
 
-<br><br>
-<h2>{{minhaVariavel}}</h2>
-
+<br>
+<ul>
+  <li *ngFor="let alu of lstAlunos">{{ alu.nome }} idade: {{ alu.idade }}</li>
+</ul>

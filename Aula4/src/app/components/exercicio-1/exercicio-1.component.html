@@ -1,0 +1,49 @@
+<div class="main background">
+  <div class="card border-primary" style="width: 500px">
+    <form #myForm="ngForm" class="text-primary" (ngSubmit)="onSubmit(myForm)">
+      <div class="card-header bg-primary text-bg-primary">
+        <b>Exercício 1</b>
+      </div>
+      <div class="form-floating m-3">
+        <input class="form-control border-primary" id="1" placeholder="" name="ac1" ngModel>
+        <label for="1">AC1</label>
+      </div>
+      <div class="form-floating m-3">
+        <input class="form-control border-primary" id="2" placeholder="" name="ac2" ngModel>
+        <label for="2">AC2</label>
+      </div>
+      <div class="form-floating m-3">
+        <input class="form-control border-primary" id="3" placeholder="" name="ag" ngModel>
+        <label for="3">AG</label>
+      </div>
+      <div class="form-floating m-3">
+        <input class="form-control border-primary" id="4" placeholder="" name="af" ngModel>
+        <label for="4">AF</label>
+      </div>
+
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary btn-lg mb-3"
+          data-bs-toggle="modal" data-bs-target="#exampleModal">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Sua média é:</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="fireConfetti()"></button>
+      </div>
+      <div class="modal-body text-center">
+       <h1>{{media}}</h1>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="fireConfetti()">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

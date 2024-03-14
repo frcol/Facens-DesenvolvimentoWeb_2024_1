@@ -1,0 +1,19 @@
+.button {
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #000000;
+  color: white;
+}
+
+/* todos os estados do button */
+.button:active {
+  background-color: #199a2c;
+  color: white;
+}
+
+

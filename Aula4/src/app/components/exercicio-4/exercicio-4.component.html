@@ -1,0 +1,52 @@
+<div class="main background">
+  <div class="card border-primary" style="width: 500px">
+    <form #myForm="ngForm" class="text-primary" (ngSubmit)="onSubmit(myForm)">
+      <div class="card-header bg-primary text-bg-primary">
+        <b>Exercício 4</b>
+      </div>
+
+      <div class="form-floating m-3">
+        <input class="form-control border-primary" id="2" placeholder="" name="nome" ngModel>
+        <label for="2">Nome</label>
+      </div>
+      <div class="form-floating m-3">
+        <select class="form-select border-primary" id="1" name="sexo" ngModel>
+          <option value="Masculino">Masculino</option>
+          <option value="Feminino">Feminino</option>
+        </select>
+        <label for="1">Sexo</label>
+      </div>
+      <div class="form-floating m-3">
+        <input class="form-control border-primary" id="4" placeholder="" type="number" name="idade" ngModel>
+        <label for="4">Idade</label>
+      </div>
+      <div class="form-floating m-3">
+        <input class="form-control border-primary" id="3" placeholder=""  name="valor" ngModel>
+        <label for="3">Valor</label>
+      </div>
+
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary btn-lg mb-3"
+        data-bs-toggle="modal" data-bs-target="#exampleModal">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Valor da Apólice:</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
+      </div>
+      <div class="modal-body text-center">
+       <h1>{{ valorApolice.toFixed(2) }}</h1>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" >Close</button>
+      </div>
+    </div>
+  </div>
+</div>
