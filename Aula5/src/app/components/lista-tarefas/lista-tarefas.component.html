@@ -1,0 +1,15 @@
+<div class="container d-flex flex-row gap-3 flex-wrap mt-4" >
+  <div class="card " style="width: 300px;" *ngFor="let tarefa of tarefas">
+    <div class="card-header" [ngClass]="{'cardDisabled': tarefa.concluida}">
+      <b>{{tarefa.titulo}}</b>
+    </div>
+    <div class="card-body">
+      <p class="card-text" [ngClass]="{'cardDisabled': tarefa.concluida}">{{tarefa.descricao}}</p>
+      <div class="text-center">
+        <a href="#" (click)="alteraTarefa(tarefa)" class="btn btn-primary" [ngClass]="{'buttonActive':!tarefa.concluida}">
+          {{ tarefa.concluida?'Desfazer':'Concluir' }}
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

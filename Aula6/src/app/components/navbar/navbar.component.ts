@@ -7,12 +7,6 @@ import { Component } from '@angular/core';
 })
 
 export class NavbarComponent {
-  appName:String;
-  menu:string[];
-
-  constructor() {
-    this.appName = 'My App';
-    this.menu = ['Casa', 'Sobre', 'Contato'];
-  }
+  parametroEnviado: string = 'Minha Facens';
 }
 

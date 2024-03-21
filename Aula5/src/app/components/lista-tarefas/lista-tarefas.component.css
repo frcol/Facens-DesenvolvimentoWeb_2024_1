@@ -1,0 +1,14 @@
+.body {
+  background-color: rgb(86, 162, 229);
+}
+
+.buttonActive {
+    background-color: #4CAF50;
+    color: white;
+}
+
+
+.cardDisabled {
+  color: rgba(0, 0, 0, 0.3); /* Define uma cor de fundo com opacidade */
+  text-decoration: line-through;
+}

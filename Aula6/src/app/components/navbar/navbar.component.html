@@ -1,6 +1,6 @@
 <div class="container-fluid bg-dark" data-bs-theme="dark">
   <nav class="navbar navbar-expand-lg">
-    <a class="navbar-brand" href="#"  style="padding-left: 20px;">{{appName}}</a>
+    <a class="navbar-brand" routerLink="casa"  style="padding-left: 20px;">Meu Primeiro App</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -8,13 +8,13 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" href="#">{{menu[0]}}</a>
+          <a class="nav-link" routerLink="casa" routerLinkActive="linkAtivo">Casa</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">{{menu[1]}}</a>
+          <a class="nav-link" routerLink="about" routerLinkActive="linkAtivo">Sobre</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">{{menu[2]}}</a>
+          <a class="nav-link" [routerLink]="['contact', parametroEnviado]" routerLinkActive="linkAtivo">Contato</a>
         </li>
       </ul>
     </div>
